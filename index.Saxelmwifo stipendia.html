@@ -1,7 +1,28 @@
 <html>
 <head>
 <title> სახელმწიფო სტიპენდია </title>
-<script language="javascript">                                                                                          <!-- ვინიღბებით!
+<html><head>
+	 <a href="test.nino.mtavari.html">მთავარი</a>
+	 <script language="javascript">
+  function startTime() {
+    var date = new Date();
+    var hours = date.getHours();
+    var minutes = date.getMinutes();
+    var seconds = date.getSeconds();
+    if (hours < 10) hours = "0" + hours;
+    if (minutes < 10) minutes = "0" + minutes;
+    if (seconds < 10) seconds = "0" + seconds;
+    document.getElementById("time").innerHTML = hours + ":" + minutes + ":" + seconds;
+    
+  }</script>
+
+
+<script language="javascript">
+setInterval(startTime, 1000);
+</script>
+  <b>დრო საიტზე: <span id="time">10:10:15</span></b>
+	
+<script language="javascript">                                                           <!-- ვინიღბებით!
 function B1(){
 alert("ეს სურათი არაა კოპირებადი");
 }
