@@ -1,0 +1,43 @@
+﻿<html>
+ <head>
+<a href="test.nino.mtavari.html">მთავარი</a>
+<title> ანბანის მიხედვით დალაგება </title>
+
+       <script language="JavaScript">
+        function sortval(obj){
+var a=obj.num1.value;
+var b=obj.num2.value;
+var c=obj.num3.value;
+var d=obj.num4.value;
+if (a>b) {r=a; a=b; b=r};
+if (a>c) {r=a; a=c;c=r};
+if(a>d){r=a;a=d;d=r};
+if (b>c) {r=b;b=c;c=r};
+if (b>d){r=b;b=d; d=r};
+if (c>d){r=c; c=d; d=r};
+obj.res1.value=a;
+obj.res2.value=b;
+obj.res3.value=c;
+obj.res4.value=d;
+}
+
+</script>
+</head>
+ <body bgcolor=pink>
+<H4> ანბანის მიხედვით დალაგება </H4>
+<FORM name="form1">
+მონაცემი 1: <input type="text" size=10 name="num1"><hr>
+მონაცემი 2: <input type="text" size=10 name="num2"><hr>
+მონაცემი 3: <input type="text" size=10 name="num3"><hr>
+მონაცემი 4: <input type="text" size=10 name="num4"><hr>
+დალაგებული სახელები
+<input type="button" value=დალაგება  onClick="sortval(form1)"><hr>
+<input type="text" size=8 name="res1"><hr> 
+<input type="text" size=8 name="res2"><hr>
+<input type="text" size=8 name="res3"><hr>
+<input type="text" size=8 name="res4"><hr>
+<input type ="reset" value= გასუფთავება>
+</FORM>
+
+</body>
+</html>
