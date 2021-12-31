@@ -1,0 +1,52 @@
+﻿<html><head>
+<title>ვის აქვს დაბადების დღე</title></head>
+<a href="test.nino.mtavari.html">მთავარი<br></a>
+<body bgcolor="pink">
+<style>
+body {
+  background-image: url('Inline.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: 60% 70%;
+  background-position:100% 20%;
+ }
+</style>
+<h2>ვის აქვს დაბადების დღე?</h2>
+<p id="demo"></p>
+<script>
+
+var d = new Date();
+  var a = d.getDate();
+  var b = d.getMonth()+1;
+  var c = d.getFullYear();
+  var e = d.getFullYear();
+a = prompt("შეიყვანეთ დაბადების რიცხვი");
+b = prompt("შეიყვანეთ დაბადების თვის რიცხვი");
+document.write("<br>","დღეს არის ",a,".",b,".",c, "<br>");
+var text = '{"chveni_jgufi":['+
+    '{"firstName":"ნიკა", "lastName":"ტყებუჩავა","day":13,"month":12,"year":"1998","img":"nika.jpg"},'+
+    '{"firstName":"მარიამ", "lastName":"რეხვიაშვილი","day":"30","month":12,"year":"2001","img":"mari.jpg"},'+
+    '{"firstName":"მარიამ", "lastName":"ხალიჩავა","day":"8","month":7,"year":"2000","img":"marii.jpg"},'+
+    '{"firstName":"ნინო", "lastName":"ცუცხუბაია","day":"29","month":9,"year":"2000","img":"nino.jpg"},'+
+    '{"firstName":"სოფო", "lastName":"ნუკრაძე","day":"11","month":4,"year":"2001","img":"sofo.jpg"},'+
+    '{"firstName":"მარიამ", "lastName":"ცუცხუბაია","day":"24","month":1,"year":"2006","img":"mariko.jpg"},'+
+    '{"firstName":"შუშანიკი", "lastName":"თოდუა","day":"25","month":11,"year":"2001","img":"shushaniki.jpg"},'+
+    '{"firstName":"ირაკლი", "lastName":"ლეჟავა","day":3,"month":2,"year":"2001","img":"irakli.jpg"},'+
+    '{"firstName":"ანი", "lastName":"გოგოხია","day":"8","month":"2","year":"2000","img":"ani.jpg"},'+
+    '{"firstName":"მარიამ","lastName":"კომლაძე","day":"14","month":"3","year":"2000","img":"mariami.jpg"}]}';
+
+obj = JSON.parse(text);
+for(i=0;i<=obj.chveni_jgufi.length;i++)
+{
+          if(obj.chveni_jgufi[i].day==a && obj.chveni_jgufi[i].month==b)
+                    {e=c-obj.chveni_jgufi[i].year; 
+                                  if(e%5==0) {document.write("<h4>დღეს ",obj.chveni_jgufi[i].firstName," ",obj.chveni_jgufi[i].lastName,"ს საიუბილეო დაბადების დღე აქვს. შეუსრულდა ", e, " წელი</h4>");                                            document.write("<img src=",obj.chveni_jgufi[i].img, " width = 400 height = 400 marginLeft = 200>");}
+else {document.write("<h2>დღეს ",obj.chveni_jgufi[i].firstName," ",obj.chveni_jgufi[i].lastName,"ს დაბადების დღეა.</h2>")
+document.write("<img src=",obj.chveni_jgufi[i].img, " width = 400 height = 400 marginLeft = 200>");}}; 
+obj.chveni_jgufi[i].firstName + " " + obj.chveni_jgufi[i].lastName + " დაბადების თარიღი: " + obj.chveni_jgufi[i].day + "  " + obj.chveni_jgufi[i].month + " " + obj.chveni_jgufi[i].year +" წელი.";
+document.write("<br>");
+}
+
+</script>
+</body>
+</html>
